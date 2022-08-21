@@ -1,10 +1,13 @@
 import { Route, Switch } from "react-router-dom";
+import MainNavigation from "./componants/layout/MainNavigation";
 import AllMeetupsPage from "./pages/AllMeetups";
 import MyFavouritePage from "./pages/MyFavourite";
 import NewMeetupsPage from "./pages/NewMeetups";
 
 function PageRouter() {
   return (
+    <div>
+    <MainNavigation></MainNavigation>
     <Switch>
       <Route path="/" exact>
         <AllMeetupsPage></AllMeetupsPage>
@@ -16,6 +19,7 @@ function PageRouter() {
         <NewMeetupsPage></NewMeetupsPage>
       </Route>
     </Switch>
+    </div>
   );
 }
 
